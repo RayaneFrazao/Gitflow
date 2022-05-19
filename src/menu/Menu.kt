@@ -33,7 +33,7 @@ class Menu {
                     listaAlimentos[nome] = quantidade
                     menu()
                 }
-                "legume" -> {
+                "legume", "outros" -> {
                     val quantidade = informarQuantidadeLegumeOutros(alimento)
                     val nome = informarNomeAlimento(alimento)
 
