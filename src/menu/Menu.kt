@@ -6,7 +6,7 @@ import kotlin.system.exitProcess
 
 class Menu {
     companion object {
-        private var listaAlimentos: HashMap<String, Number> = HashMap()
+        private var listaAlimentos: H<String, Number> = HashMap()
 
 
         fun menu() {
@@ -33,12 +33,23 @@ class Menu {
                     menu()
                 }
                 "legume", "outros" -> {
-                    //TODO: terminar de implementar lógica (1/3)
+                    val quantidade = informarQuantidadeLegumeOutros(alimento)
+                    val nome = informarNomeAlimento(alimento)
+                    menu()
                 }
                 "ver lista" -> {
-                    //TODO: terminar de implementar lógica (2/3)
-                    /*listaAlimentos.forEach { alimento, quantidade ->  }*/
-                }
+  if listaAlimentos.isEmpty())
+                    println ( " Lista vazia " )
+                    menu()
+                } else{
+                    println ( " ------- LISTA DE COMPRAS ------- " )
+      /*listaAlimentos.forEach { alimento, quantidade ->  }*/
+                println ( " Nome do item:  ${alimento}  - Quantidade:  ${quantidade} . " )
+  }
+                println ( " A quantidade de alimentosdo tipo outros a ser comprada é =  ${listaAlimentos.size} " )
+                    menu()
+            }
+        }
                 "sair" -> {
                     println("Até breve!")
                     exitProcess(0)
